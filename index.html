@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="overflow: hidden;">
+    <div class="wrapper w-[100vw] h-[100vh] flex flex-col items-center justify-center gap-10 overflow:hidden ">
+        <div class="container w-[500px] flex flex-col items-center justify-center gap-5 overflow:hidden  ">
+            <div class=" w-[100%] flex flex-col justify-center items-center">
+                <p class="heading text-[35px]"> Password Generator</p>
+            </div>
+            <div class="display-container w-[100%] flex justify-between text-[20px] p-5 border rounded">
+                    <div>
+                        <!-- custom atrribute -->
+                        <input data-passwordDisplay readonly placeholder="PASSWORD" class="display w-[350px]" > 
+                    </div>
+                    <button data-copy class="copyBtn">
+                        <span data-copyMsg class="tooltip"></span>
+                        <i class="fa-regular fa-copy"></i>
+                    </button> 
+            </div>
+            
+            <div class="input-container w-[100%] flex flex-col gap-5 p-5 border rounded">
+                <!-- Password length -->
+                <div class="length-container flex justify-between">
+                    <div class="text-[20px]">
+                        Password Length
+                    </div>
+                    <div data-lengthNumber class="text-[20px]">
+                        1
+                    </div>
+                </div>
+                <!-- slider -->
+                <div class="slideContainer" >
+                    <input type="range" min="1" max="20" class="styled-slider" step="1" data-lengthSlider> 
+                </div>
+                <!-- checkboxes -->
+                <div class="flex flex-col gap-5 text-[20px] justify-items-center">
+                    <div class="check">
+                        <input type="checkbox" id="uppercase" class="styled-checkbox">
+                        <label for="uppercase">Include Uppercase Letters</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="lowercase" class="styled-checkbox">
+                        <label for="lowercase">Include Lowercase Letters</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="numbers" class="styled-checkbox">
+                        <label for="numbers">Include Numbers</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="symbols" class="styled-checkbox">
+                        <label for="symbols">Include Symbols</label>
+                    </div>
+                </div>
+
+                <!-- Strength section -->
+                <div class="strength-container flex justify-between items-center mb-2">
+                    <div class="text-[20px]">
+                        Strength
+                    </div>
+                    <div data-indicator class=" w-[25px] h-[25px] rounded-full">
+                        <!-- circle -->
+                    </div>
+                </div>
+
+                <!-- generate password button -->
+                <div class="grid justify-items:center text-[20px]  ">
+                    <button class="generateButton border py-2 " >
+                        Generate Password
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

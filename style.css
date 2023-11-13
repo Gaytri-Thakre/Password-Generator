@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root{
+    --vb-cyan:#4caf50;
+}
+
+
+
+.wrapper{
+    box-sizing: border-box;
+    font-family: 'Space Grotesk';
+    /* global 94%+ browsers support angry tools*/
+    background: linear-gradient(90deg, rgba(185, 230, 169, 1) 0%, rgba(123, 223, 100, 1) 50%, rgba(1, 167, 34, 1) 99%);        
+}
+.heading{
+    color: white;
+    opacity: 0.75;
+    letter-spacing: 2px ;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+.display-container{
+    position: relative;
+    background-color: azure;
+   
+}
+.display{
+    background-color: transparent;
+    border: none;
+    outline: none;
+} 
+
+.display::placeholder{
+    color: black ;
+    text-transform: uppercase;
+}
+.display-container button{
+    position: absolute;
+    right: 1.5rem;
+}
+
+.input-container{
+    background-color: rgb(222, 240, 240);
+    
+}
+
+
+/* Style the slider */
+.styled-slider {
+    -webkit-appearance: none;
+    width: 100%; /* Set the width of the slider */
+    height: 10px; /* Set the height of the slider track */
+    border-radius: 5px; /* Optional: round the corners of the slider track */
+    background: #e2d3d3; /* Set the background color of the slider track */
+    outline: none; /* Remove the default focus outline */
+    opacity: 0.7; /* Set the initial opacity of the slider */
+    transition: opacity 0.2s; /* Add a smooth transition effect on hover */
+    background: linear-gradient(90deg, rgba(185, 230, 169, 1) 0%, rgba(123, 223, 100, 1) 50%, rgba(1, 167, 34, 1) 99%);
+    background-repeat: no-repeat;
+}
+
+/* Customize the appearance of the slider thumb */
+.styled-slider::-webkit-slider-thumb {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; /* Set the width of the slider thumb */
+    height: 20px; /* Set the height of the slider thumb */
+    border-radius: 50%; /* Make the slider thumb a circle */
+    background: #4caf50; /* Set the background color of the slider thumb */
+    cursor: pointer; /* Change the cursor to a pointer */
+}
+
+.styled-slider::-moz-range-thumb{
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; /* Set the width of the slider thumb */
+    height: 20px; /* Set the height of the slider thumb */
+    border-radius: 50%; /* Make the slider thumb a circle */
+    background: #4caf50; /* Set the background color of the slider thumb */
+    cursor: pointer; /* Change the cursor to a pointer */
+}
+
+/* Change the appearance of the slider when it is in the active state (clicked) */
+.styled-slider::-webkit-slider-thumb:active {
+    background: #45a049; 
+    /* Change the background color of the slider thumb when active */
+    outline: 3px solid #45a049;
+}
+.styled-slider::-moz-range-thumb:active {
+    background: #45a049; 
+    /* Change the background color of the slider thumb when active */
+    outline: 3px solid #45a049;
+}
+/* Change the appearance of the slider on hover */
+.styled-slider:hover {
+    opacity: 1; /* Set the opacity to 1 on hover to make the slider fully visible */
+}
+
+
+
+
+
+
+/* Hide the default checkbox */
+.styled-checkbox {
+    display: none;
+}
+
+/* Style the custom checkbox */
+.styled-checkbox + label {
+    position: relative;
+    padding-left: 30px; /* Adjust the space for the checkbox */
+    cursor: pointer;
+}
+
+/* Create a custom checkbox design using a ::before pseudo-element */
+.styled-checkbox + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px; /* Size of the checkbox */
+    height: 20px; /* Size of the checkbox */
+    border: 2px solid #333; /* Border color of the checkbox */
+    background-color: white; /* Background color of the checkbox */
+    text-align: center; /* Center the checkmark */
+    line-height: 20px; /* Center the checkmark vertically */
+}
+
+/* Add a checkmark to the custom checkbox when checked */
+.styled-checkbox:checked + label::before {
+    content: '\2713'; /* Unicode character for a checkmark */
+    background-color: #4caf50; /* Background color when checked */
+    border-color: #4caf50; /* Border color when checked */
+    color: white; /* Color of the checkmark */
+}
+
+
+
+/* Generate Button */
+.generateButton{
+    background-color: #45a049;
+    border-bottom: 0.35rem solid whitesmoke;
+    color:whitesmoke
+}
+/* Define a new background color for the button when clicked */
+.clicked{
+    background-color: #4caf50;
+    color: white;
+}
+.tooltip{
+    /* background-color: aliceblue; */
+    position: absolute;
+    background-color: #333;
+    color: white;
+    font-size: 1.25rem;
+    top:-35px;
+    left:-25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+.tooltip.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* firefox */
+/* tooltip */
+/* angrytool*/

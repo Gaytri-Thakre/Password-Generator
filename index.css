@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+
+.wrapper{
+    box-sizing: border-box;
+    font-family: 'Space Grotesk';
+    
+}
+
+
+/* Style the slider */
+.styled-slider {
+    -webkit-appearance: none;
+    width: 100%; /* Set the width of the slider */
+    height: 10px; /* Set the height of the slider track */
+    border-radius: 5px; /* Optional: round the corners of the slider track */
+    background: #d3d3d3; /* Set the background color of the slider track */
+    outline: none; /* Remove the default focus outline */
+    opacity: 0.7; /* Set the initial opacity of the slider */
+    transition: opacity 0.2s; /* Add a smooth transition effect on hover */
+}
+
+/* Customize the appearance of the slider thumb */
+.styled-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; /* Set the width of the slider thumb */
+    height: 20px; /* Set the height of the slider thumb */
+    border-radius: 50%; /* Make the slider thumb a circle */
+    background: #4caf50; /* Set the background color of the slider thumb */
+    cursor: pointer; /* Change the cursor to a pointer */
+}
+/* Change the appearance of the slider when it is in the active state (clicked) */
+.styled-slider::-webkit-slider-thumb:active {
+    background: #45a049; /* Change the background color of the slider thumb when active */
+}
+/* Change the appearance of the slider on hover */
+.styled-slider:hover {
+    opacity: 1; /* Set the opacity to 1 on hover to make the slider fully visible */
+}
+
+/* Hide the default checkbox */
+.styled-checkbox {
+    display: none;
+}
+
+/* Style the custom checkbox */
+.styled-checkbox + label {
+    position: relative;
+    padding-left: 30px; /* Adjust the space for the checkbox */
+    cursor: pointer;
+}
+
+/* Create a custom checkbox design using a ::before pseudo-element */
+.styled-checkbox + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px; /* Size of the checkbox */
+    height: 20px; /* Size of the checkbox */
+    border: 2px solid #333; /* Border color of the checkbox */
+    background-color: white; /* Background color of the checkbox */
+}
+
+/* Change the appearance of the custom checkbox when checked */
+.styled-checkbox:checked + label::before {
+    background-color: #4caf50; /* Background color when checked */
+    border-color: #4caf50; /* Border color when checked */
+}
+
+/* Generate Button */ 
+/* Define a new background color for the button when clicked */
+.clicked{
+    background-color: #4caf50;
+    color: white;
+}
+
