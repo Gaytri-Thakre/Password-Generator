@@ -41,6 +41,4 @@ A simple password generator web application that generates random secure passwor
 
 No additional dependencies are required. Just download the files and open the HTML file in a web browser.
 
-## License
 
-This project is open-source and available under the [MIT License](LICENSE).
